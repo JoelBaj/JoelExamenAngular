@@ -18,7 +18,7 @@
                 {{pais.name.common}}
             </a>
          </li>
-         <li 
+         <li class="list-group-item list-group-item-action"
          (click)="buscarSugerido( termino )">
          <a class="nav-link">
              Buscar "{{ termino }}"
@@ -34,7 +34,7 @@
     No se encontro nada con el termino: {{termino}}
 </div>
 
-<div  class="row">
+<div *ngIf="paises.length > 0" class="row">
     <div class="col">
         <app-tabla [paises]="paises"></app-tabla>
     </div>
